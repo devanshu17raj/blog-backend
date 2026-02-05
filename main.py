@@ -22,7 +22,7 @@ load_dotenv()  # <--- THIS IS THE CRITICAL MISSING LINE
 app = FastAPI()
 
 # Enable React to talk to Python
-origins = ["http://localhost:5173"]
+origins = ["*"]
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
